@@ -1,9 +1,12 @@
 # jacki
 
-A jack of all trades is master of none...
-but oftentimes better than the master of one
+"A jack of all trades is master of none...
+but oftentimes better than the master of one"
 
 Created by Joseph Whelpley and August Berchelmann.
+
+<img width="2493" height="1364" alt="image" src="https://github.com/user-attachments/assets/eb45483d-a4f0-413d-a56f-5f8f471e37f2" />
+
 
 ## Features
 
