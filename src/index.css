@@ -1,0 +1,109 @@
+:root {
+  --sidebar-width: 250px;
+  --sidebar-collapsed-width: 64px;
+  --sidebar-bg: #d44a5c;
+  --transition-time: 220ms;
+  --gutter: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  color: #222;
+  /* Background image is set via JavaScript in index.js */
+}
+
+/* App layout wrapper */
+.app-container {
+  min-height: 100vh;
+}
+
+/* Fixed sidebar will be styled in Sidebar.css, but we ensure main is offset */
+.main {
+  margin-left: var(--sidebar-width); /* normal offset */
+  padding: 20px;
+  transition: margin-left var(--transition-time) ease;
+  /* make main scroll independently if you want */
+  /* overflow-y: auto; height: 100vh; */
+}
+
+/* When the app-container has .collapsed, shrink the left offset */
+.app-container.collapsed .main {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* If mobile overlay is open, don't push content; overlay shows on top */
+.app-container.mobile-open .main {
+  margin-left: 0;
+}
+
+/* Posts grid — responsive cards */
+.posts-container {
+  display: grid;
+  gap: 16px;
+  /* auto-fit / minmax pattern for responsive columns */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items: start;
+}
+
+/* Card basics (Postcard) — tweak as desired */
+.postcard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Small screens: make sidebar an overlay (hidden by default) */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 12px;
+  }
+  /* when mobile open, we'll reveal the sidebar as overlay */
+}
+
+/* Example utility */
+.h-100 {
+  height: 100%;
+}
+
+/* Apply Google Font to all titles (except post cards) */
+h1, h2, h3, h4, h5, h6,
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4,
+.MuiTypography-h5,
+.MuiTypography-h6 {
+  font-family: 'Borel', 'Croissant One', cursive !important;
+}
+
+/* Exclude post cards from title font */
+.postcard h1,
+.postcard h2,
+.postcard h3,
+.postcard h4,
+.postcard h5,
+.postcard h6,
+.postcard .MuiTypography-h1,
+.postcard .MuiTypography-h2,
+.postcard .MuiTypography-h3,
+.postcard .MuiTypography-h4,
+.postcard .MuiTypography-h5,
+.postcard .MuiTypography-h6 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+}

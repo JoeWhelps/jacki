@@ -1,0 +1,97 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dashboard-title {
+  font-family: 'Borel', 'Croissant One', cursive;
+  font-size: 48px;
+  color: #d44a5c;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-score-card {
+  background: linear-gradient(135deg, #d44a5c 0%, #b83a4a 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(212, 74, 92, 0.3);
+}
+
+.dashboard-score-label {
+  font-family: 'Borel', 'Croissant One', cursive;
+  font-size: 24px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.dashboard-score-value {
+  font-family: 'Borel', 'Croissant One', cursive;
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.dashboard-history {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-history-title {
+  font-family: 'Borel', 'Croissant One', cursive;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dashboard-empty {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  font-style: italic;
+}
+
+.dashboard-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-history-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #d44a5c;
+}
+
+.dashboard-history-points {
+  font-family: 'Borel', 'Croissant One', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #d44a5c;
+  min-width: 60px;
+}
+
+.dashboard-history-details {
+  flex: 1;
+}
+
+.dashboard-history-reason {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.dashboard-history-date {
+  font-size: 12px;
+  color: #666;
+}
+

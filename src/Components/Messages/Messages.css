@@ -1,0 +1,88 @@
+.messages-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.conversations-list {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.chat-window {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/public/background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.chat-window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.chat-paper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.chat-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(245, 245, 245, 0.9);
+}
+
+.message-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: rgba(245, 245, 245, 0.9);
+}
+
+.no-chat-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+}
+
+.message {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.received {
+    align-self: flex-start;
+    background-color: #fff;
+}

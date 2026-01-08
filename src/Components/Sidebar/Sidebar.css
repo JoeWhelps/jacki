@@ -1,0 +1,124 @@
+/* Default sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: #d44a5c;
+  color: #fff;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Toggle button inside sidebar that allows collapse*/
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Top right when expanded */
+}
+
+/* When collapsed → move button to top-left */
+.sidebar.collapsed .toggle-btn {
+  right: auto;
+  left: 10px;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 60px 0 20px 0;
+}
+
+.sidebar-top {
+  flex: 1;
+}
+
+.sidebar-nav h1 {
+  font-family: 'Borel', 'Croissant One', cursive;
+  margin: 0 0 20px 20px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.sidebar-nav li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav a {
+  font-family: 'Borel', 'Croissant One', cursive;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.sidebar-nav a:hover {
+  color: #fff;
+}
+
+/* Sidebar bottom section with logout */
+.sidebar-bottom {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-profile-link {
+  font-family: 'Borel', 'Croissant One', cursive;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.sidebar-profile-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logout {
+  font-family: 'Borel', 'Croissant One', cursive;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px 20px;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.sidebar-logout:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

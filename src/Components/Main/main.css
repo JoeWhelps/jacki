@@ -1,0 +1,39 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* Background image is set globally, no background color here */
+}
+
+.search-bar {
+  width: 53.33%; /* Reduced by 1/3 from 80% */
+  margin: 20px 0;
+  z-index: 1000;
+}
+
+.search-bar .MuiInputRoot {
+  border-radius: 50px; /* More rounded */
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-bar .MuiInputRoot fieldset {
+  border: none;
+}
+
+.MuiAutocomplete-popper {
+  z-index: 1001 !important;
+}
+
+/*Styling for the main components*/
+.main {
+  margin-left: 220px; /* same as expanded sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar collapsed */
+.sidebar.collapsed ~ .main {
+  margin-left: 60px;
+}
